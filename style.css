@@ -201,3 +201,111 @@ p {
 }
 
 /* End of Comprehensive Marketing */
+
+/* Selling Process */
+.selling{
+    background: var(--c4--);
+    padding:  4rem 0;
+}
+
+.selling h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--c3--);
+}
+
+.selling .selling-container{
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap--);
+}
+
+.selling div{
+    text-align: center;
+}
+
+.number{
+    font-weight: 700;
+    font-size: clamp(2rem, 7.5vw, 5rem);
+    color: var(--c5--);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.number:hover{
+    color: var(--c2--);
+    transform: scale(1.1);
+}
+
+/* End of Selling Process */
+
+/* card Containers */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.card {
+    height: 500px;
+    width: 350px; /* Set a fixed width to ensure all cards are equally sized */
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    height: 70%; /* Set image height to 70% of the card */
+    width: 100%; /* Ensure images cover the card width */
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.intro {
+    height: 150px; /* Initial height of intro */
+    width: 100%; /* Full width of the card */
+    padding: 6px;
+    box-sizing: border-box;
+    bottom: 0; /* Start from the bottom */
+    position: absolute;
+    /* background: rgba(27, 27, 27, 0.5); */
+    background: var(--c5--);
+    color: white;
+    transition: height 0.3s ease, background 0.3s ease; /* Smooth transition */
+}
+
+.intro h1 {
+    margin: 10px;
+    font-size: 24px; /* Adjusted size for consistency */
+    transition: transform 0.3s ease; /* Smooth transform */
+}
+
+.intro p {
+    font-size: 14px; /* Adjusted size for consistency */
+    margin: 10px; /* Adjusted margin */
+    visibility: hidden; /* Start hidden */
+    opacity: 0; /* Start with zero opacity */
+    transition: visibility 0s 0.3s, opacity 0.3s ease; /* Delay visibility change until fade out */
+    color: var(--c1--);
+}
+
+.card:hover .intro {
+    height: 350px; /* Expanded height on hover */
+    background: var(--c5--); /* Background color on hover */
+}
+
+.card:hover .intro h1 {
+    transform: translateY(-10px); /* Move the heading up slightly */
+}
+
+.card:hover .intro p {
+    visibility: visible; /* Make paragraph visible */
+    opacity: 1; /* Fade in */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+/* End of Card Containers */
